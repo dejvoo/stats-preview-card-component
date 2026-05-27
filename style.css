@@ -2,7 +2,7 @@ body {
   background-color: hsl(233, 47%, 7%);
   font-family: "Inter", "Lexend Deca", sans-serif;
   margin: 0;
-  padding: 1rem;
+  padding: 30px;
   color: white;
   font-size: 15px;
 }
@@ -43,6 +43,8 @@ body {
   background-color: hsl(244, 38%, 16%);
   border-radius: 0.5rem;
   overflow: hidden;
+  max-width: 375px;
+  width: 100%;
 }
 
 .card-text {
@@ -92,4 +94,31 @@ span {
   color: hsla(0, 0%, 100%, 0.6);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+@media (min-width: 700px) {
+  .main-content {
+    max-width: 1440px;
+    flex-direction: row-reverse;
+    padding: 70px;
+  }
+  .card-text {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    gap: 40px;
+  }
+
+  .card-heading {
+    font-size: 2.5rem;
+  }
+
+  .card-description {
+    padding: 0;
+  }
+  .stats-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
